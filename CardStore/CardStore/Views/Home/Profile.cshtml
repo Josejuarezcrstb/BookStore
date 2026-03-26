@@ -1,0 +1,40 @@
+@{
+    ViewData["Title"] = "Profile";
+}
+
+<div class="container">
+    <h1>Create Account</h1>
+
+    @if (TempData["RegisterError"] != null)
+    {
+        <div class="alert alert-danger">@TempData["RegisterError"]</div>
+    }
+
+    <form id="profileForm" class="row g-3" method="post" asp-controller="Home" asp-action="Register">
+        @Html.AntiForgeryToken()
+        <div class="col-md-6">
+            <label for="firstName" class="form-label">First name</label>
+            <input name="FirstName" type="text" class="form-control" id="firstName" required />
+        </div>
+        <div class="col-md-6">
+            <label for="lastName" class="form-label">Last name</label>
+            <input name="LastName" type="text" class="form-control" id="lastName" required />
+        </div>
+        <div class="col-md-6">
+            <label for="email" class="form-label">Email</label>
+            <input name="Email" type="email" class="form-control" id="email" required />
+        </div>
+        <div class="col-md-6">
+            <label for="username" class="form-label">Username</label>
+            <input name="Username" type="text" class="form-control" id="username" required />
+        </div>
+        <div class="col-12">
+            <label for="password" class="form-label">Password</label>
+            <input name="Password" type="password" class="form-control" id="password" required />
+        </div>
+        <div class="col-12">
+            <button type="submit" class="btn btn-primary">Create Account</button>
+        </div>
+    </form>
+
+</div>

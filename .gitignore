@@ -1,0 +1,60 @@
+# .NET Core
+bin/
+obj/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Visual Studio
+.vs/
+*.dbmdl
+*.mdf
+*.ldf
+*.pdb
+*.cache
+*.ilk
+*.log
+
+# Rider
+.idea/
+*.sln.iml
+
+# NuGet
+*.nupkg
+# The packages folder can be ignored because of Package Restore
+**/packages/*
+!**/packages/build/
+!**/packages/repositories.config
+
+# OS artifacts
+.DS_Store
+Thumbs.db
+
+# ASP.NET temporary files
+App_Data/*.mdf
+App_Data/*.ldf
+
+# User secrets
+secrets.json
+
+# Logs
+*.log
+logs/
+
+# Publish output
+publish/
+wwwroot/dist/
+
+# JetBrains Rider
+.idea/
+*.sln.iml
+
+# Ignore local and generated config
+appsettings.*.json
+
+# node/npm
+node_modules/
+
+# Ignore tooling files
+.vscode/
